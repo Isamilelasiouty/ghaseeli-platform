@@ -11,7 +11,8 @@ An executive presentation website for the graduation project **"Ghaseeli" (غس�
 
 ## 🌐 Live Deployed URL
 
-- **GitHub Pages Live Demo:** [https://github.com/ghaseeli-platform](https://github.com/ghaseeli-platform) *(Deploys automatically via GitHub Actions)*
+- **GitHub Pages Live Demo:** [https://isamilelasiouty.github.io/ghaseeli-platform/](https://isamilelasiouty.github.io/ghaseeli-platform/)
+- **GitHub Repository:** [https://github.com/Isamilelasiouty/ghaseeli-platform](https://github.com/Isamilelasiouty/ghaseeli-platform)
 
 ---
 
