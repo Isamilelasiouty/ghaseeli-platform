@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white: #FFFFFF;
+  --surface: #F5FAFE;
+  --blue-50: #E6F2FB;
+  --blue-500: #0A6EBD;
+  --blue-700: #0B4F8A;
+  --blue-900: #0A2F52;
+  --ink: #0F2A43;
+  --muted: #4A6580;
+  --ok: #1E9E6A;
+  --warn: #E8A317;
+  --danger: #D64545;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cairo', sans-serif;
+  line-height: 1.35;
+}
+
+/* Logical properties helper styles */
+.rtl-mirror {
+  transform: scaleX(-1);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: #B6D7F2;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-500);
+}
