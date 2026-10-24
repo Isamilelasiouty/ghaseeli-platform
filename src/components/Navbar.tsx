@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Activity } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import content from '../content/content.ar';
+import { KidneyLogo } from './KidneyLogo';
 
 export const Navbar: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -49,28 +50,32 @@ export const Navbar: React.FC = () => {
       </a>
 
       {/* Sticky Navigation Header */}
-      <header className="sticky top-0 z-40 w-full bg-white/85 backdrop-blur-md border-b border-blue-50 transition-all duration-200">
+      <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-blue-50/80 shadow-xs transition-all duration-200">
         {/* Scroll Progress Bar */}
         <div
-          className="absolute top-0 right-0 h-1 bg-blue-500 transition-all duration-150 ease-out z-50"
+          className="absolute top-0 right-0 h-1 bg-gradient-to-l from-blue-500 to-blue-700 transition-all duration-150 ease-out z-50"
           style={{ width: `${scrollProgress}%` }}
         />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* Brand Logo & Name */}
+          {/* Brand: Kidney Logo + REN + منصة غسيلي */}
           <NavLink
             to="/"
-            className="flex items-center gap-3 text-ink hover:text-blue-500 transition-colors group"
+            className="flex items-center gap-3.5 text-ink hover:text-blue-500 transition-colors group"
           >
-            <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all shadow-soft">
-              <Activity className="w-6 h-6" />
-            </div>
-            <div>
-              <span className="font-heading font-extrabold text-xl text-blue-700 block leading-tight">
-                {content.meta.brandName}
-              </span>
-              <span className="text-[10px] text-muted block -mt-0.5">
-                {content.meta.department}
+            <KidneyLogo size={42} showIndicator={true} />
+
+            <div className="flex flex-col">
+              <div className="flex items-center gap-2">
+                <span className="font-heading font-extrabold text-2xl tracking-tight text-blue-700 leading-none" dir="ltr">
+                  REN
+                </span>
+                <span className="text-xs font-bold text-ink/80 block">
+                  {content.meta.brandName}
+                </span>
+              </div>
+              <span className="text-[10px] text-muted font-medium block mt-0.5 tracking-wider" dir="ltr">
+                Resource · Emergency · Nephrology
               </span>
             </div>
           </NavLink>
@@ -82,9 +87,9 @@ export const Navbar: React.FC = () => {
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
-                  `px-3 py-2 text-sm font-semibold rounded-xl transition-all duration-200 ${
+                  `px-3.5 py-2 text-sm font-bold rounded-xl transition-all duration-200 ${
                     isActive
-                      ? 'text-blue-500 bg-blue-50/80 font-bold'
+                      ? 'text-blue-500 bg-blue-50 font-extrabold shadow-2xs'
                       : 'text-ink/80 hover:text-blue-500 hover:bg-surface'
                   }`
                 }
@@ -124,9 +129,9 @@ export const Navbar: React.FC = () => {
                   key={item.path}
                   to={item.path}
                   className={({ isActive }) =>
-                    `px-4 py-3 text-base font-semibold rounded-xl transition-all ${
+                    `px-4 py-3 text-base font-bold rounded-xl transition-all ${
                       isActive
-                        ? 'text-blue-500 bg-blue-50 font-bold'
+                        ? 'text-blue-500 bg-blue-50 font-extrabold'
                         : 'text-ink hover:bg-surface'
                     }`
                   }

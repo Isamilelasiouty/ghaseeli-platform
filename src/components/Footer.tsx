@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { ExternalLink, Shield, Activity } from 'lucide-react';
+import { ExternalLink, Shield } from 'lucide-react';
 import content from '../content/content.ar';
+import { KidneyLogo } from './KidneyLogo';
 
 export const Footer: React.FC = () => {
   return (
@@ -10,13 +11,21 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-white/10">
           {/* Col 1: Project Identity */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center">
-                <Activity className="w-6 h-6" />
+            <div className="flex items-center gap-3.5">
+              <KidneyLogo size={40} showIndicator={false} />
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="font-heading font-extrabold text-2xl tracking-tight text-white leading-none" dir="ltr">
+                    REN
+                  </span>
+                  <span className="font-heading font-bold text-sm text-blue-200">
+                    {content.meta.brandName}
+                  </span>
+                </div>
+                <span className="text-[10px] text-blue-200/70 font-medium block mt-0.5 tracking-wider" dir="ltr">
+                  Resource · Emergency · Nephrology
+                </span>
               </div>
-              <span className="font-heading font-extrabold text-2xl">
-                {content.meta.brandName}
-              </span>
             </div>
             <p className="text-xs text-blue-50/80 leading-relaxed">
               {content.meta.projectName}
@@ -29,7 +38,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 2: Navigation Links */}
           <div>
-            <ul className="space-y-2 text-sm text-blue-50/80">
+            <ul className="space-y-2 text-sm text-blue-50/80 font-medium">
               <li>
                 <NavLink to="/" className="hover:text-white transition-colors">
                   الرئيسية
@@ -89,11 +98,11 @@ export const Footer: React.FC = () => {
 
         {/* Disclaimer Bottom Note */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-blue-50/60 gap-4">
-          <p className="max-w-2xl text-center md:text-right">
+          <p className="max-w-2xl text-center md:text-right leading-relaxed">
             {content.appendixA.section10.disclaimers[0].content}
           </p>
           <span className="font-mono text-[11px]" dir="ltr">
-            Ghaseeli Executive Presentation &copy; 2026
+            REN Platform &copy; 2026
           </span>
         </div>
       </div>

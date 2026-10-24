@@ -20,16 +20,16 @@ export default {
         danger: 'var(--danger)',
       },
       fontFamily: {
-        heading: ['Cairo', 'sans-serif'],
-        body: ['"IBM Plex Sans Arabic"', 'sans-serif'],
+        heading: ['Almarai', 'Readex Pro', 'sans-serif'],
+        body: ['Almarai', 'sans-serif'],
       },
       borderRadius: {
         'card': '20px',
       },
       boxShadow: {
-        'soft': '0 4px 20px -2px rgba(10, 110, 189, 0.08)',
-        'elevated': '0 12px 32px -4px rgba(10, 47, 82, 0.12)',
-        'glow': '0 0 24px rgba(10, 110, 189, 0.25)',
+        'soft': '0 4px 20px -2px rgba(2, 132, 199, 0.08)',
+        'elevated': '0 12px 32px -4px rgba(9, 34, 56, 0.12)',
+        'glow': '0 0 24px rgba(2, 132, 199, 0.25)',
       }
     },
   },
